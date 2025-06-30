@@ -21,7 +21,9 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+button {
+    border: none;
     margin: 0;
     padding: 0;
 
@@ -35,6 +37,22 @@ a {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+#popup {
+    position: fixed;
+    top: 1vh;
+
+    background-color: #ffffff;
+    padding: 3px 20px;
+    border-radius: 5px;
+
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+#popup-content {
+    color: #000000;
 }
 
 #profile {
@@ -75,9 +93,21 @@ a {
     text-align: center;
 }
 
+#email {
+    font-size: 15px;
+    background: #ffffff;
+    color: #000000;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
 #email:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+#email:active {
+    scale: 0.95;
 }
 
 #links {
