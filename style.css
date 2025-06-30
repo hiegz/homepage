@@ -57,7 +57,7 @@ button {
 
 #profile {
     max-width: 400px;
-    padding-top: 10vh;
+    padding-top: 5vh;
 
     display: flex;
     flex-direction: column;
