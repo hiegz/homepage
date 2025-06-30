@@ -61,6 +61,7 @@ button {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #profile-body {
@@ -69,7 +70,22 @@ button {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
+}
+
+#profile-photo-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+#profile-photo {
+    position: relative;
+    right: 90px;
+    bottom: 45px;
+    transform: scale(0.7);
 }
 
 #profile-content {
