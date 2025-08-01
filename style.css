@@ -136,6 +136,16 @@ button {
 #links * {
     font-size: 35pt;
     color: #ffffff;
+
+    transition: all .1s ease-in-out;
+}
+
+#links * :hover {
+    transform: translateY(-2.5px);
+}
+
+#links * :active {
+    transform: translateY(0px);
 }
 
 #footer-note {
