@@ -115,6 +115,8 @@ button {
     color: #000000;
     padding: 2px 7px;
     border-radius: 5px;
+
+    transition: all .05s ease-in-out;
 }
 
 #email:hover {
