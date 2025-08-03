@@ -29,7 +29,7 @@ button {
 
     text-decoration: none;
 
-    color: #ffffff;
+    color: #323232;
 
     font-family: "Inter";
     text-align: center;
@@ -65,6 +65,7 @@ button {
 }
 
 #profile-body {
+    padding: 30px;
     margin-top: auto;
     margin-bottom: auto;
 
@@ -72,20 +73,25 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    background: #ffffff;
+    border-radius: 10px;
 }
 
 #profile-photo-container {
-    width: 200px;
+    width: 300px;
     height: 200px;
-    border-radius: 100%;
-    overflow: hidden;
+    overflow: visible;
+    background: red;
 }
 
 #profile-photo {
-    position: relative;
-    right: 90px;
-    bottom: 45px;
-    transform: scale(0.7);
+    width: 300px;
+    height: 130px;
+
+
+    object-fit: cover;
+    object-position: 0px -80px;
 }
 
 #profile-content {
@@ -111,8 +117,8 @@ button {
 
 #email {
     font-size: 15px;
-    background: #ffffff;
-    color: #000000;
+    background: #323232;
+    color: #ffffff;
     padding: 2px 7px;
     border-radius: 5px;
 
@@ -137,7 +143,7 @@ button {
 
 #links * {
     font-size: 35pt;
-    color: #ffffff;
+    color: #323232;
 
     transition: all .1s ease-in-out;
 }
