@@ -80,6 +80,8 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    animation: float 3s ease-in-out infinite;
 }
 
 #profile-photo {
@@ -131,6 +133,9 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    animation: float 3s ease-in-out infinite;
+    animation-delay: .3s;
 }
 
 #links {
@@ -153,4 +158,18 @@ button {
 
 #links * :active {
     transform: translateY(0px);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
