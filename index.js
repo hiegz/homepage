@@ -128,7 +128,10 @@ async function onEmailButtonClick() {
 
 window.onload = async function () {
     let emailLabel = document.getElementById("email-address");
-
     emailLabel.innerHTML = EMAIL;
-    await transition(emailLabel, { opacity: 0 }, { opacity: 1 }, 500);
+
+    const sections = document.querySelectorAll("#body > *");
+    sections.forEach((child, index) => {
+        child.style.animationDelay = `${index * 0.3}s, ${index * 0.3 + 1}s`;
+    });
 };
