@@ -8,32 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/6c8072bbc2.js" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
     <title>hiegz</title>
 </head>
 <body>
-    <div id="popup">
-        <p id="popup-content">I am popup</p>
-    </div>
-
     <div id="body">
         <div id="profile" class="block">
             <img src="./assets/hiegz.png" id="profile-photo"/>
 
             <div>
-                <h2 id="nickname">@hiegz</h1V>
+                <h2 id="nickname">@hiegz</h2>
                 <h1 id="fullname">Volodymyr But</h1>
-                <p id="email-container">
+                <div id="email">
                     Say
-                    <button id="email" onclick="copyEmailToClipboard()">
-                        hello@hiegz.com
+                    <button id="email-button" onclick="onEmailButtonClick()">
+                        <span id="email-address">
+                            <!-- Set inside index.js -->
+                            &nbsp;
+                        </span>
                     </button>
-                </p>
+                </div>
             </div>
         </div>
-        
+
         <div id="socials" class="block">
-            <p> You're probably looking for one of these:</p> 
+            <p> You're probably looking for one of these:</p>
 
             <div id="links">
                 <a href="https://linked.in/in/hiegz" target="_blank">
