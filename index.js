@@ -127,6 +127,9 @@ async function onEmailButtonClick() {
 }
 
 window.onload = async function () {
+    let body = document.getElementById("body");
+    body.classList.add("loaded");
+
     let emailLabel = document.getElementById("email-address");
     emailLabel.innerHTML = EMAIL;
 

@@ -64,6 +64,12 @@ button {
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    visibility: hidden;
+}
+
+#body.loaded {
+    visibility: visible;
 }
 
 #body > * {
