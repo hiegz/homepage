@@ -50,5 +50,49 @@
             </div>
         </div>
     </div>
+
+    <noscript>
+        <style>
+            #body { display: none; }
+
+            html  { height: 100%; }
+            body {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #no-js-warning-block {
+                border-radius: 5px;
+                background: #E9D502;
+
+                /* depends on style.css */
+                opacity: 0;
+                animation: intro 1s ease-in-out forwards, float 3s ease-in-out infinite;
+                will-change: opacity, transform;
+            }
+
+            #no-js-warning-block > h3 {
+                font-weight: 700;
+                color: #323232;
+                padding: 10px 20px 0px 20px;
+            }
+
+            #no-js-warning-block > p {
+                font-weight: 500;
+                color: #323232;
+                padding: 5px 20px 10px 20px;
+            }
+        </style>
+
+        <div id="no-js-warning-block">
+            <h3>Oops...</h3>
+            <p>
+                This webpage could not be loaded properly. <br/>
+                Javascript is disabled or not supported.
+            </p>
+        </div>
+    </noscript>
 </body>
 </html>
