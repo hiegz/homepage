@@ -76,11 +76,6 @@ button {
     width: 100%;
     background: #ffffff;
     border-radius: 10px;
-
-    opacity: 0;
-    animation: intro 1s ease-in-out forwards, float 3s ease-in-out infinite;
-    will-change: opacity, transform;
-    /* animation delay accumulates (implemented inside index.js) */
 }
 
 #profile {
@@ -178,30 +173,4 @@ button {
 
 #links * :active {
     transform: translateY(0px);
-}
-
-@keyframes intro {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-2.5px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }

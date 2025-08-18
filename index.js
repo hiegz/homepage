@@ -27,6 +27,35 @@ async function transition(element, from, to, duration, easing = "ease-in-out") {
 }
 
 /**
+ * Performs the intro animation on a given DOM element.
+ */
+async function intro(element, duration) {
+    await transition(
+        element,
+        { opacity: 0, transform: "translateY(2.5px)" },
+        { opacity: 1, transform: "translateY(0px)" },
+        duration,
+    );
+}
+
+/**
+ * Makes a given DOM element float.
+ */
+function float(element) {
+    const keyframes = [
+        { transform: "translateY(0)" },
+        { transform: "translateY(-2.5px)" },
+    ];
+
+    element.animate(keyframes, {
+        duration: 1500,
+        easing: "ease-in-out",
+        direction: "alternate",
+        iterations: Infinity,
+    });
+}
+
+/**
  * Email Button Click Handler
  */
 async function onEmailButtonClick() {
@@ -127,14 +156,23 @@ async function onEmailButtonClick() {
 }
 
 window.onload = async function () {
-    let body = document.getElementById("body");
-    body.classList.add("loaded");
-
     let emailLabel = document.getElementById("email-address");
     emailLabel.innerHTML = EMAIL;
 
     const sections = document.querySelectorAll("#body > *");
-    sections.forEach((child, index) => {
-        child.style.animationDelay = `${index * 0.3}s, ${index * 0.3 + 1}s`;
+
+    // prepare for the intro animation
+    sections.forEach((child, _) => {
+        child.style.opacity = 0;
     });
+
+    let body = document.getElementById("body");
+    body.classList.add("loaded");
+
+    // animate sections
+    for (let i = 0; i < sections.length; ++i) {
+        let child = sections[i];
+        intro(child, 1000).then(() => float(child));
+        await delay(300);
+    }
 };
