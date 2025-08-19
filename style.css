@@ -115,18 +115,17 @@ button {
     min-width: 140px;
     height: 24px;
     border-radius: 5px;
+    cursor: pointer;
 
     background: #323232;
-
-    transition: transform .05s ease-in-out;
 }
 
-#email-button:hover {
-    cursor: pointer;
+#email-button:hover > #email-address {
+    color: #ccc;
 }
 
-#email-button:active {
-    transform: scale(0.95);
+#email-button:active > #email-address {
+    color: #fff;
 }
 
 #email-address {
@@ -134,14 +133,12 @@ button {
     color: #ffffff;
     padding: 0;
     margin: 0;
+
+    transition: color .3s ease-in-out;
 }
 
-#email-address:hover {
-    text-decoration: underline;
-}
-
-#email-address.animated:hover  {
-    text-decoration: none;
+#email-address.animated {
+    color: #fff !important;
 }
 
 #career {
@@ -154,6 +151,16 @@ button {
 
 #linkedin {
     font-size: 40pt;
+    color: #fff;
+
+    transition: color .3s ease-in-out;
+}
+
+#linkedin:hover {
+    color: #ccc;
+}
+
+#linkedin:active {
     color: #fff;
 }
 
@@ -170,15 +177,19 @@ button {
 
     cursor: pointer;
 
-    transition: transform .1s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+#cv-download-button:hover {
+    background: #cccccc;
 }
 
 #cv-download-button:active {
-    transform: scale(0.95);
+    background: #ffffff;
 }
 
 #cv-download-button.clicked {
-    transform: scale(0.95);
+    background: #ffffff;
 }
 
 #cv-download-button > * {
@@ -202,13 +213,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transition: transform .1s ease-in-out;
-    transform: scale(0.95);
-}
-
-#cv-download-options.clicked {
-    transform: scale(1);
 }
 
 #cv-download-options > * {
@@ -220,6 +224,20 @@ button {
 
     text-align: center;
     cursor: pointer;
+
+    transition: background .3s ease-in-out;
+}
+
+#cv-download-options > *:hover {
+    background: #cccccc;
+}
+
+#cv-download-options > *:active {
+    background: #ffffff;
+}
+
+#cv-download-options.clicked > * {
+    background: #ffffff;
 }
 
 #cv-download-options :nth-child(1) {
@@ -269,16 +287,14 @@ button {
 #links > a {
     font-size: 40pt;
     color: #fff;
+
+    transition: color .3s ease-in-out;
 }
 
-#links > a > i {
-    transition: transform .1s ease-in-out;
+#links > a:hover {
+    color: #ccc;
 }
 
-#links > a:hover > i {
-    transform: translateY(-2.5px);
-}
-
-#links > a:active > i {
-    transform: translateY(0px);
+#links > a:active {
+    color: #fff;
 }
