@@ -19,18 +19,6 @@ async function transition(element, from, to, duration, easing = "ease-in-out") {
 }
 
 /**
- * Performs the intro animation on a given DOM element.
- */
-async function intro(element, duration) {
-    await transition(
-        element,
-        { opacity: 0, transform: "translateY(2.5px)" },
-        { opacity: 1, transform: "translateY(0px)" },
-        duration,
-    );
-}
-
-/**
  * Makes a given DOM element float.
  */
 function float(element) {
