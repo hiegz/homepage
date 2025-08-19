@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/6c8072bbc2.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer></script>
+    <script src="./cv.js" defer></script>
     <title>hiegz</title>
 </head>
 <body>
@@ -47,6 +48,30 @@
 
                 <a href="https://x.com/hiegzz" target="_blank">
                     <i class="fa fa-brands fa-square-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="cv-container">
+            <button id="cv-download-button" onclick="onCVDownloadButtonClick()">
+                <span>
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    Download CV
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                </span>
+            </button>
+
+            <div id="cv-download-options">
+                <a href="https://drive.google.com/uc?export=download&id=1kHTWTJsmXfYvCN3cw-QG8lzTLhr34hR4" onclick="onCVDownloadOptionClick()" download>
+                    <img src="./assets/uk.png"/>
+                </a>
+
+                <button onclick="onCVDownloadOptionClick()">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+
+                <a href="https://drive.google.com/uc?export=download&id=1FTHaZfZuZU0fADtpOkwifZxqAISOnOoh" onclick="onCVDownloadOptionClick()" download>
+                    <img src="./assets/germany.png"/>
                 </a>
             </div>
         </div>
