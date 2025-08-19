@@ -2,7 +2,7 @@
  * Flag used by the CV download button click handler to handle user clicks while the
  * button is still being animated.
  */
-let animating = false;
+let animatingCVDownloadButton = false;
 
 let cvDownloadButton = document.getElementById("cv-download-button");
 let cvDownloadOptions = document.getElementById("cv-download-options");
@@ -16,8 +16,8 @@ for (let i = 0; i < cvDownloadOptions.children.length; ++i) {
  * CV download button click handler
  */
 async function onCVDownloadButtonClick() {
-    if (animating) return;
-    animating = true;
+    if (animatingCVDownloadButton) return;
+    animatingCVDownloadButton = true;
 
     // ---
 
@@ -83,15 +83,15 @@ async function onCVDownloadButtonClick() {
 
     // ---
 
-    animating = false;
+    animatingCVDownloadButton = false;
 }
 
 /**
  * CV download option click handler
  */
 async function onCVDownloadOptionClick() {
-    if (animating) return;
-    animating = true;
+    if (animatingCVDownloadButton) return;
+    animatingCVDownloadButton = true;
 
     // ---
 
@@ -157,5 +157,5 @@ async function onCVDownloadOptionClick() {
 
     // ---
 
-    animating = false;
+    animatingCVDownloadButton = false;
 }
