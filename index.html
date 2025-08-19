@@ -17,11 +17,7 @@
 </head>
 <body>
     <div id="body">
-        <div id="links">
-            <a href="https://linked.in/in/hiegz" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-
+        <header id="links">
             <a href="https://github.com/hiegz" target="_blank">
                 <i class="fa-brands fa-square-github"></i>
             </a>
@@ -29,9 +25,9 @@
             <a href="https://x.com/hiegzz" target="_blank">
                 <i class="fa fa-brands fa-square-x-twitter"></i>
             </a>
-        </div>
+        </header>
 
-        <div id="profile">
+        <main id="profile">
             <img src="./assets/hiegz.png" id="profile-photo"/>
 
             <div>
@@ -47,29 +43,35 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </main>
 
-        <div id="cv-container">
-            <button id="cv-download-button" onclick="onCVDownloadButtonClick()">
-                <span>
-                    View my CV
-                </span>
-            </button>
+        <footer id="career">
+            <a id="linkedin" href="https://linked.in/in/hiegz" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
 
-            <div id="cv-download-options">
-                <a href="https://drive.google.com/uc?export=download&id=1kHTWTJsmXfYvCN3cw-QG8lzTLhr34hR4" onclick="onCVDownloadOptionClick()" download>
-                    <img src="./assets/uk.png"/>
-                </a>
-
-                <button onclick="onCVDownloadOptionClick()">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <div id="cv">
+                <button id="cv-download-button" onclick="onCVDownloadButtonClick()">
+                    <span>
+                        View my CV
+                    </span>
                 </button>
 
-                <a href="https://drive.google.com/uc?export=download&id=1FTHaZfZuZU0fADtpOkwifZxqAISOnOoh" onclick="onCVDownloadOptionClick()" download>
-                    <img src="./assets/germany.png"/>
-                </a>
+                <div id="cv-download-options">
+                    <a href="https://drive.google.com/uc?export=download&id=1kHTWTJsmXfYvCN3cw-QG8lzTLhr34hR4" onclick="onCVDownloadOptionClick()" download>
+                        <img src="./assets/uk.png"/>
+                    </a>
+
+                    <button onclick="onCVDownloadOptionClick()">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+
+                    <a href="https://drive.google.com/uc?export=download&id=1FTHaZfZuZU0fADtpOkwifZxqAISOnOoh" onclick="onCVDownloadOptionClick()" download>
+                        <img src="./assets/germany.png"/>
+                    </a>
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
 
     <noscript>
