@@ -305,9 +305,11 @@ button {
 #github-link > i {
     color: #323232;
     font-size: 26pt;
+    margin-top: 2px;
 }
 
 #source-link > i {
     color: #323232;
     font-size: 17pt;
+    margin-top: 3px;
 }
