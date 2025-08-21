@@ -47,7 +47,7 @@ async function onCVDownloadButtonClick() {
         transition(
             cvDownloadOptions.children[1],
             { borderRadius: 0 },
-            { borderRadius: "10px" },
+            { borderRadius: "5px" },
             50,
         ),
         transition(
@@ -129,7 +129,7 @@ async function onCVDownloadOptionClick() {
         ),
         transition(
             cvDownloadOptions.children[1],
-            { borderRadius: "10px" },
+            { borderRadius: "5px" },
             { borderRadius: 0 },
             50,
         ),
