@@ -256,9 +256,10 @@ button {
     border-bottom-left-radius: 5px;
 }
 
-#cv-download-options :nth-child(1) > img {
-    width: 40px;
-    height: auto;
+#cv-download-options :nth-child(1) > span {
+    width: fit-content;
+    height: fit-content;
+    font-weight: 600;
 }
 
 #cv-download-options :nth-child(2) {
@@ -279,9 +280,10 @@ button {
     border-bottom-right-radius: 5px;
 }
 
-#cv-download-options :nth-child(3) > img {
-    width: 40px;
-    height: auto;
+#cv-download-options :nth-child(3) > span {
+    width: fit-content;
+    height: fit-content;
+    font-weight: 600;
 }
 
 #links {
