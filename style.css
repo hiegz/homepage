@@ -84,6 +84,7 @@ button {
 
 #body {
     width: 375px;
+    min-height: 600px;
 
     display: flex;
     flex-direction: column;
