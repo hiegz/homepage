@@ -16,8 +16,8 @@ async function onEmailButtonClick() {
     const STAGE_DURATION = 300;
     const STAGE_DELAY = 750;
 
-    if (animatingCVDownloadButton) return;
-    animatingCVDownloadButton = true;
+    if (animatingEmailButton) return;
+    animatingEmailButton = true;
 
     let emailButton = document.getElementById("email-button");
     let emailLabel = document.getElementById("email-address");
@@ -106,5 +106,5 @@ async function onEmailButtonClick() {
      * ==================
      */
 
-    animatingCVDownloadButton = false;
+    animatingEmailButton = false;
 }
