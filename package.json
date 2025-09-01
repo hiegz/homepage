@@ -6,6 +6,9 @@
     "start": "webpack server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
+  "engines": {
+      "node": "22.x"
+  },
   "devDependencies": {
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
