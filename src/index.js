@@ -1,4 +1,5 @@
 import $ from "jquery";
+import clock from "./clock.js";
 
 import "./style.css";
 
@@ -9,4 +10,5 @@ if (process.env.NODE_ENV === "development") {
 
 window.addEventListener("load", function () {
     $("#wallpaper").css("display", "initial");
+    clock.start();
 });
