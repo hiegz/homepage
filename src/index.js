@@ -14,5 +14,5 @@ window.addEventListener("load", async function () {
     $("#wallpaper").css("display", "initial");
     clock.start();
 
-    await login.load();
+    await login();
 });
