@@ -13,15 +13,29 @@ export default async function () {
             import("./login/dot.html"),
         ]);
 
-    $("body").append(viewHtml);
+    /** @type {JQuery<HTMLElement>} */
+    const $parent = $("body");
+
+    /** @type {JQuery<HTMLElement>} */
+    const $view = $(viewHtml);
+
+    /** @type {JQuery<HTMLElement>} */
+    const $input = $view.find("#password-input");
+
+    /** @type {JQuery<HTMLElement>} */
+    const $button = $view.find("#password-submit-button");
+
+    /* */
+
+    $view.appendTo($parent);
 
     await delay(500);
 
     // simulate typing
     for (let i = 0; i < 8; ++i) {
         await delay(randomInBetween(70, 150));
-        $("#password-input").append(dotHtml);
+        $input.append(dotHtml);
     }
 
-    $("#password-submit-button").removeAttr("disabled");
+    $button.removeAttr("disabled");
 }
