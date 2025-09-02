@@ -16,10 +16,12 @@ async function load() {
 
     // simulate typing
     for (let i = 0; i < 8; ++i) {
+        await delay(randomInBetween(70, 150));
         const currentVal = $("#password-input").val();
         $("#password-input").val(currentVal + "-");
-        await delay(randomInBetween(70, 150));
     }
+
+    $("#password-submit-button").removeAttr("disabled");
 }
 
 /* */
