@@ -15,7 +15,7 @@ async function load() {
     await delay(500);
 
     // simulate typing
-    for (let i = 0; i < 10; ++i) {
+    for (let i = 0; i < 8; ++i) {
         const currentVal = $("#password-input").val();
         $("#password-input").val(currentVal + "-");
         await delay(randomInBetween(70, 150));
