@@ -1,5 +1,6 @@
 import $ from "jquery";
-import html from "./view.html";
+import viewHtml from "./view.html";
+import dotHtml from "./dot.html";
 
 /**
  * --
@@ -10,15 +11,14 @@ async function load() {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-    $("body").append(html);
+    $("body").append(viewHtml);
 
     await delay(500);
 
     // simulate typing
     for (let i = 0; i < 8; ++i) {
         await delay(randomInBetween(70, 150));
-        const currentVal = $("#password-input").val();
-        $("#password-input").val(currentVal + "-");
+        $("#password-input").append(dotHtml);
     }
 
     $("#password-submit-button").removeAttr("disabled");
