@@ -1,9 +1,9 @@
 import $ from "jquery";
+import delay from "./delay.js";
 import viewHtml from "./login/view.html";
 import dotHtml from "./login/dot.html";
 
 export default async function () {
-    const delay = (ms) => new Promise((res) => setTimeout(res, ms));
     const randomInBetween = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
