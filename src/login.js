@@ -1,12 +1,17 @@
 import $ from "jquery";
 import delay from "./delay.js";
-import viewHtml from "./login/view.html";
-import dotHtml from "./login/dot.html";
 
 export default async function () {
     const randomInBetween = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
+
+    // prettier-ignore
+    const [{ default: viewHtml }, { default: dotHtml }] =
+        await Promise.all([
+            import("./login/view.html"),
+            import("./login/dot.html"),
+        ]);
 
     $("body").append(viewHtml);
 
