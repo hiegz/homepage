@@ -13,6 +13,33 @@ export default async function () {
             import("./login/dot.html"),
         ]);
 
+    /**
+     * KeyDown event handler
+     *
+     * @param {KeyboardEvent} event
+     */
+    const onKeyDown = (event) => {
+        if (event.key !== "Enter") return;
+
+        if (!isButtonDisabled()) {
+            $button.addClass("!bg-[#335277]");
+        }
+    };
+
+    /**
+     * KeyUp event handler
+     *
+     * @param {KeyboardEvent} event
+     */
+    const onKeyUp = (event) => {
+        if (event.key !== "Enter") return;
+
+        if (!isButtonDisabled()) {
+            $button.removeClass("!bg-[#335277]");
+            $button.trigger("click");
+        }
+    };
+
     /** @type {JQuery<HTMLElement>} */
     const $parent = $("body");
 
@@ -36,6 +63,9 @@ export default async function () {
 
     $view.appendTo($parent);
 
+    $parent.on("keydown", onKeyDown);
+    $parent.on("keyup", onKeyUp);
+
     await delay(500);
 
     // simulate typing
@@ -45,4 +75,7 @@ export default async function () {
     }
 
     $button.removeAttr("disabled");
+
+    $parent.off("keydown", onKeyDown);
+    $parent.off("keyup", onKeyUp);
 }
