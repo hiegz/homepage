@@ -76,6 +76,12 @@ export default async function () {
 
     $button.removeAttr("disabled");
 
+    await new Promise((res) => {
+        $button.on("click", res);
+    });
+
+    $view.remove();
+
     $parent.off("keydown", onKeyDown);
     $parent.off("keyup", onKeyUp);
 }
