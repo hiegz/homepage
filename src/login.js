@@ -25,6 +25,13 @@ export default async function () {
     /** @type {JQuery<HTMLElement>} */
     const $button = $view.find("#password-submit-button");
 
+    /** checks if button is disabled */
+    const isButtonDisabled = () =>
+        $button.attr("disabled") != undefined &&
+        $button.attr("disabled") != false;
+
+    $button.attr("disabled", true);
+
     /* */
 
     $view.appendTo($parent);
