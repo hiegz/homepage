@@ -7,6 +7,11 @@ export default {
         filename: "main.js",
         path: path.resolve(import.meta.dirname, "dist"),
     },
+    resolve: {
+        alias: {
+            "@": path.resolve(import.meta.dirname, "src"),
+        },
+    },
     module: {
         rules: [
             {
