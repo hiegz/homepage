@@ -1,7 +1,7 @@
 import $ from "jquery";
 import clock from "./clock.js";
 
-import login from "./login/view.js";
+import login from "./login.js";
 
 import "./style.css";
 

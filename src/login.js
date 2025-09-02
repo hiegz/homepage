@@ -1,6 +1,6 @@
 import $ from "jquery";
-import viewHtml from "./view.html";
-import dotHtml from "./dot.html";
+import viewHtml from "./login/view.html";
+import dotHtml from "./login/dot.html";
 
 /**
  * --
