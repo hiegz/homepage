@@ -2,6 +2,7 @@ import $ from "jquery";
 import clock from "./clock.js";
 
 import login from "./login.js";
+import iconGrid from "./icon-grid.js";
 
 import "./style.css";
 
@@ -15,4 +16,6 @@ window.addEventListener("load", async function () {
     clock.start();
 
     await login();
+
+    iconGrid.$view.appendTo("#desktop");
 });
