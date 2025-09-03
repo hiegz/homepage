@@ -30,6 +30,20 @@ export class WindowComponent {
         this.#$view.detach();
     }
 
+    // prettier-ignore
+    center() {
+        const parent  = this.#$view.parent().get(0).getBoundingClientRect();
+        const node    = this.#$view.get(0).getBoundingClientRect();
+        const centerX = parent.width / 2;
+        const centerY = parent.height / 2;
+
+        const newX    = Math.max(parent.left, centerX - node.width / 2);
+        const newY    = Math.max(parent.top,  centerY - node.height / 2);
+
+        this.#$view.css("top", `${newY - parent.top}px`);
+        this.#$view.css("left", `${newX - parent.left}px`);
+    }
+
     /** @param {function(MouseEvent): void} callback */
     set onclose(callback) {
         this.#$closeButton.off("click").on("click", callback);
