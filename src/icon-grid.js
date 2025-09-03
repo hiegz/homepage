@@ -21,4 +21,9 @@ function icon(iconSrc, label) {
 const $folderIcon = icon(FolderIcon, "hiegz");
 $folderIcon.appendTo($view.children().eq(7));
 
+$folderIcon.on("click", async function (event) {
+    const folder = (await import("@/folder")).default;
+    folder.open();
+});
+
 export default { $view };

@@ -5,6 +5,7 @@ import clock from "./clock.js";
 
 import login from "./login.js";
 import iconGrid from "./icon-grid.js";
+import folder from "./folder.js";
 
 import "./style.css";
 
