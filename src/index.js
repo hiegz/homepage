@@ -1,3 +1,5 @@
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 import $ from "jquery";
 import clock from "./clock.js";
 

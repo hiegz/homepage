@@ -22,6 +22,10 @@ export default {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.woff2?$/,
+                type: "asset/resource",
+            },
         ],
     },
     plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
