@@ -18,6 +18,10 @@ export default {
                 test: /\.html$/i,
                 loader: "html-loader",
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
         ],
     },
     plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
