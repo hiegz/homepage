@@ -2,9 +2,10 @@
     class="
         window 
         absolute 
-        bg-[#061616] 
-        shadow-[inset_0_5px_10px_#39434e] 
+        bg-[#dee0e2] 
+        shadow-2xl shadow-black
         left-0 
+        rounded-sm
         max-w-full w-fit max-sm:w-full max-h-full h-fit max-sm:h-full
         flex flex-col
     "
@@ -15,14 +16,15 @@
            title-bar
            h-[30px]
            flex justify-between items-center
-           p-5
+           p-3
            rounded-xs
-           text-white
+           text-black
         "
     >
+        <div></div>
         <p class="title"></p>
         <button class="close-button cursor-pointer"> ✕ </button>
     </div>
 
-    <div class="window-container m-1 rounded-xs overflow-hidden flex-grow"></div>
+    <div class="window-container flex-grow"></div>
 </div>
