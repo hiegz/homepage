@@ -1,4 +1,3 @@
-import "bootstrap-icons/font/bootstrap-icons.css";
 import "./style.css";
 
 // import index.html so that webpack can watch and refresh the file whenever it is changed
